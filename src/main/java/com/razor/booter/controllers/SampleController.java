@@ -22,7 +22,6 @@ import org.springframework.web.bind.annotation.*;
  */
 
 @Controller
-@EnableAutoConfiguration
 @EnableEurekaClient
 public class SampleController {
 
