@@ -28,9 +28,9 @@ public class SampleController {
     @Autowired
     StoreIntegration storeIntegration;
 
-    @RequestMapping("/")
+    @RequestMapping("/api/stores")
     @ResponseBody
-    String home() {
+    String stores() {
         return storeIntegration.getStores();
     }
 }
