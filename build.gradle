@@ -4,8 +4,10 @@ apply plugin: 'application'
 apply plugin: "io.spring.dependency-management"
 apply plugin: 'net.saliman.cobertura'
 apply plugin: 'pmd'
+apply plugin: 'spring-boot'
 
 mainClassName = 'com.razor.booter.Booter'
+
 
 buildscript {
     repositories {
@@ -14,7 +16,7 @@ buildscript {
     }
     dependencies {
       classpath "io.spring.gradle:dependency-management-plugin:0.5.3.RELEASE"
-      classpath "org.springframework.boot:spring-boot-gradle-plugin:1.2.3.RELEASE"
+      classpath "org.springframework.boot:spring-boot-gradle-plugin:1.3.2.RELEASE"
       classpath "net.saliman:gradle-cobertura-plugin:2.3.0"
     }
 }

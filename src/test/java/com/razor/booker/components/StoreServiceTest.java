@@ -1,6 +1,6 @@
 package com.razor.booker.components;
 
-import com.razor.booter.components.StoreIntegration;
+import com.razor.booter.components.StoreService;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,11 +14,11 @@ import org.mockito.runners.MockitoJUnitRunner;
  */
 
 @RunWith(MockitoJUnitRunner.class)
-public class StoreIntegrationTest {
+public class StoreServiceTest {
 
     @InjectMocks
     @Spy
-    private StoreIntegration storeIntegration;
+    private StoreService storeIntegration;
 
     @Before
     public void setUp() {

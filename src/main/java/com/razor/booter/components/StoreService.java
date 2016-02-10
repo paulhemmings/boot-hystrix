@@ -13,8 +13,8 @@ import java.util.Map;
  * https://github.com/Netflix/Hystrix/tree/master/hystrix-contrib/hystrix-javanica
  */
 
-@Service("storeIntegration")
-public class StoreIntegration {
+@Service("storeService")
+public class StoreService {
 
     @HystrixCommand(fallbackMethod = "defaultStores")
     public String getStores() {
