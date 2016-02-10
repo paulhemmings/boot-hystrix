@@ -2,6 +2,7 @@ package com.razor.booter.controllers;
 
 import com.razor.booter.components.StoreService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
@@ -21,11 +22,19 @@ import org.springframework.web.bind.annotation.*;
 
  * class not found: ModelBuildingException
  * https://github.com/spring-gradle-plugins/dependency-management-plugin/issues/54
+ *
+ * Controller <- Component scan will pick this up as a controller, and add it to the Spring Context
+ *
+ * EnableEurekaClient <- Register this service with the Service Discovery Service Eureka
+ *
+ * EnableCircuitBreaker <- tell Spring Cloud that the Reading application uses circuit breakers
+ * and to enable their monitoring, opening, and closing (behavior supplied, in our case, by Hystrix).
  */
 
 
 @Controller
 @EnableEurekaClient
+@EnableCircuitBreaker
 public class StoreController {
 
     @Autowired
